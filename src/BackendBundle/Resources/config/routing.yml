@@ -1,0 +1,7 @@
+backend_homepage:
+    path:     /
+    defaults: { _controller: BackendBundle:Default:index }
+
+producto:
+    path: /producto
+    defaults: { _controller: BackendBundle:producto }

@@ -1,0 +1,65 @@
+BackendBundle\Entity\Producto:
+    type: entity
+    table: producto
+    indexes:
+        id_almacen:
+            columns:
+                - id_almacen
+    id:
+        idproducto:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: idProducto
+            generator:
+                strategy: IDENTITY
+    fields:
+        codigo:
+            type: string
+            nullable: false
+            length: 10
+            options:
+                fixed: false
+        nombre:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+        descripcion:
+            type: string
+            nullable: false
+            length: 40
+            options:
+                fixed: false
+        stock:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+        precioUnidad:
+            type: float
+            nullable: false
+            precision: 8
+            scale: 2
+            column: precio_unidad
+        costoUnidad:
+            type: float
+            nullable: false
+            precision: 8
+            scale: 2
+            column: costo_unidad
+    manyToOne:
+        idAlmacen:
+            targetEntity: Almacen
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                id_almacen:
+                    referencedColumnName: id_almacen
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

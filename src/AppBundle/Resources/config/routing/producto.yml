@@ -1,0 +1,29 @@
+producto_nuevo:
+    path: /nuevo
+    defaults: { _controller: "AppBundle:Producto:nuevo" }
+    methods: POST
+
+producto_editar:
+    path: /editar/{id}
+    defaults: { _controller: "AppBundle:Producto:editar", id:null }
+    methods: POST
+    
+producto_lista:
+    path: /lista
+    defaults: { _controller: "AppBundle:Producto:listar" }
+    methods: GET
+    
+producto_detalle:
+    path: /detalle/{id}
+    defaults: { _controller: "AppBundle:Producto:detalle", id:null }
+    methods: GET
+
+producto_eliminar:
+    path: /eliminar/{id}
+    defaults: { _controller: "AppBundle:Producto:eliminar", id:null }
+    methods: POST
+
+pruebas:
+    path: /pruebas
+    defaults: { _controller: "AppBundle:Producto:pruebas"}
+    methods: POST

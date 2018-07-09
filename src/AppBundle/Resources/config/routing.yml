@@ -1,0 +1,7 @@
+app_default:
+    resource: "@AppBundle/Resources/config/routing/default.yml"
+    prefix: /
+
+app_producto:
+    resource: "@AppBundle/Resources/config/routing/producto.yml"
+    prefix: /producto
